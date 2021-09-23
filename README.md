@@ -1,16 +1,12 @@
 # oxide
+
 ## Rust language laboratory
 
 
-```
+> Read the [step by step diary](https://github.com/AtomicBuilders/oxyde/blob/main/docs/index.md) of my learning progress.
 
-cargo new oxide
 
-cargo test
 
-cargo run
+## Created by Alberto Basalo
 
-cargo build
-
-```
-
+[@albertobasalo](https://twitter.com/albertobasalo)

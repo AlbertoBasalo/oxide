@@ -3,4 +3,15 @@
         "editor.defaultFormatter": "rust-lang.rust", // Makes the magic
         "editor.formatOnSave": true // Optional
     },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "html",
+        "typescript",
+        "rust"
+    ],
 }

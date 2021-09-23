@@ -1,3 +1,28 @@
+# 0 - Hello world
+
+## 0.1 Install tools
+
+- [Official download site](https://www.rust-lang.org/tools/install)
+
+- [Windows ONLY Visual C++ build tools](https://visualstudio.microsoft.com/es/visual-cpp-build-tools/)
+
+- [VS Code extensions](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)
+
+
+## 0.2 Hello world
+
+```bash
+ # generate a folder for your program
+cargo new oxide
+cd cargo new oxide
+code .
+```
+
+### Show me the code
+
+On `src/main.rs` file [View code](https://github.com/AtomicBuilders/oxide/blob/main/src/main.rs)
+
+```rust
 // the main function, called on startup
 fn main() {
     let program: String; // declaring a variable of type String
@@ -12,7 +37,22 @@ fn main() {
 fn get_start_line(program: String) -> String {
     return format!("{}{}{}", "🚀 ", program, " started");
 }
+```
 
+
+### Build and run
+
+```bash
+cargo run  # builds the executable file and runs it
+cargo build # generates an executable
+./target/debug/oxide.exe  # runs it on your platform
+```
+
+## 0.3 Testing
+
+### Tests goes on the same file
+
+```rust
 /*
     Test functions are on the same file than the main function
     They have to be decorated with #[cfg(test)]
@@ -32,3 +72,12 @@ mod tests {
         assert_eq!(actual, expected);
     }
 }
+```
+
+### Run tests
+
+```bash
+cargo test # builds and runs on memory
+```
+
+### [Back to index](https://github.com/AtomicBuilders/oxide/blob/main/docs/0-hello-world.md)
