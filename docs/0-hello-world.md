@@ -80,4 +80,4 @@ mod tests {
 cargo test # builds and runs on memory
 ```
 
-### [Back to index](https://github.com/AtomicBuilders/oxide/blob/main/docs/0-hello-world.md)
+### [Back to index](https://github.com/AtomicBuilders/oxide/blob/main/docs/index.md)
