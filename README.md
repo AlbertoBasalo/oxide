@@ -3,7 +3,7 @@
 ## Rust language laboratory
 
 
-> Read the [step by step diary](https://github.com/AtomicBuilders/oxyde/blob/main/docs/index.md) of my learning progress.
+> Read the [step by step diary](https://github.com/AtomicBuilders/oxide/blob/main/docs/index.md) of my learning progress.
 
 
 
