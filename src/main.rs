@@ -1,9 +1,13 @@
+mod variables;
+
 // the main function, called on startup
 fn main() {
     let program: String; // declaring a variable of type String
     program = "oxide".to_string(); // assign a value (transformed) to the variable
     let line = get_start_line(program); // initialize and assign a value
     println!("{}", line); // print the value of the variable
+
+    variables::initialize_wallet(); // call the function
 }
 /*
     Function that returns a formated string
