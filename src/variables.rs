@@ -1,5 +1,6 @@
 use chrono;
 
+// structs for complex types
 #[derive(Debug, PartialEq)]
 pub struct Wallet {
     holder: String,
@@ -11,10 +12,13 @@ pub struct Wallet {
 
 pub fn initialize_wallet() -> Wallet {
     println!("💰 My wallet");
+    // standard way to declare, with implicit type, and assign value to a variable
     let wallet_holder = "Alberto Basalo";
     println!("Wallet holder: {}", wallet_holder);
-    let wallet_balance = 0.0;
+    // attention for different kinds of numbers
+    let wallet_balance: f64 = 0.0;
     println!("Wallet balance: {}", wallet_balance);
+    // A kind of string enum
     #[derive(Debug)]
     enum CurrencyTypes {
         USD,
@@ -30,6 +34,7 @@ pub fn initialize_wallet() -> Wallet {
     println!("Minimum Transaction : {}", MINIMUM_TRANSACTION);
     let is_active: bool = true;
     println!("Is active: {}", is_active);
+    // date and time came on their own crates
     let creation_date = chrono::Local::now();
     println!("Creation date: {}", creation_date);
     let expiration_date = creation_date + (chrono::Duration::days(365 * 2));
@@ -52,6 +57,7 @@ pub fn initialize_wallet() -> Wallet {
         transaction_type: TransactionType::Deposit,
     };
     println!("New transaction: {:?}", new_transaction);
+    // Mutable arrays are called Vectors
     let mut transactions: Vec<Transaction> = Vec::new();
     transactions.push(new_transaction);
     println!("Transactions: {:?}", transactions);
@@ -69,7 +75,6 @@ pub fn initialize_wallet() -> Wallet {
 mod tests {
     use super::*;
     #[test]
-    // test the name is snake_case of the scenario
     fn it_should_get_start_line() {
         // arrange
         // act
@@ -82,6 +87,7 @@ mod tests {
             minimun_transaction: 0.01,
             number_of_transactions: 0,
         };
+        // requires the trait PartialEq
         assert_eq!(actual, expected);
     }
 }
