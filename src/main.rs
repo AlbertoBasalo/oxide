@@ -1,3 +1,4 @@
+mod control;
 mod variables;
 
 // the main function, called on startup
@@ -8,6 +9,7 @@ fn main() {
     println!("{}", line); // print the value of the variable
 
     variables::initialize_wallet(); // call the function
+    control::calculate_balance_1(Vec::new()); // call the function
 }
 /*
     Function that returns a formated string

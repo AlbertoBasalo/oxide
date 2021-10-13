@@ -9,6 +9,26 @@ pub struct Wallet {
     minimun_transaction: f32,
     number_of_transactions: u32,
 }
+// A kind of string enum
+#[derive(Debug)]
+pub enum CurrencyTypes {
+    USD,
+    EUR,
+    Bitcoin,
+    Ether,
+}
+#[derive(Debug, PartialEq)]
+pub enum TransactionType {
+    Deposit,
+    Withdrawal,
+    Transfer,
+}
+#[derive(Debug)]
+pub struct Transaction {
+    pub date: chrono::DateTime<chrono::Local>,
+    pub amount: f32,
+    pub transaction_type: TransactionType,
+}
 
 pub fn initialize_wallet() -> Wallet {
     println!("💰 My wallet");
@@ -18,14 +38,6 @@ pub fn initialize_wallet() -> Wallet {
     // attention for different kinds of numbers
     let wallet_balance: f64 = 0.0;
     println!("Wallet balance: {}", wallet_balance);
-    // A kind of string enum
-    #[derive(Debug)]
-    enum CurrencyTypes {
-        USD,
-        EUR,
-        Bitcoin,
-        Ether,
-    }
     let wallet_currency = CurrencyTypes::Ether;
     println!("Wallet currency: {:?}", wallet_currency);
     let number_of_transactions: u32 = 0;
@@ -39,18 +51,6 @@ pub fn initialize_wallet() -> Wallet {
     println!("Creation date: {}", creation_date);
     let expiration_date = creation_date + (chrono::Duration::days(365 * 2));
     println!("Expiration date: {}", expiration_date);
-    #[derive(Debug)]
-    enum TransactionType {
-        Deposit,
-        Withdrawal,
-        Transfer,
-    }
-    #[derive(Debug)]
-    struct Transaction {
-        date: chrono::DateTime<chrono::Local>,
-        amount: f32,
-        transaction_type: TransactionType,
-    }
     let new_transaction = Transaction {
         date: chrono::Local::now(),
         amount: 0.01,
