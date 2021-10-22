@@ -1,4 +1,5 @@
 mod control;
+mod functions;
 mod variables;
 
 // the main function, called on startup
@@ -10,6 +11,7 @@ fn main() {
 
     variables::initialize_wallet(); // call the function
     control::calculate_balance_1(Vec::new()); // call the function
+    functions::process_transactions(&Vec::new()); // call the function
 }
 /*
     Function that returns a formated string
